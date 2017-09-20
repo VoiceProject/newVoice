@@ -1,5 +1,6 @@
 
 import LunchComponent from './MineComponent/LunchComponent.js';
+import FooterComponent from "./FooterComponent"
 import {Link} from 'react-router';
 class MineComponent extends React.Component {   
     constructor(props,context){
@@ -118,7 +119,7 @@ class MineComponent extends React.Component {
                         </div>
                     </div>
                 </div>
-               
+               <FooterComponent active="/mine"/>
             </div>
         )
     }

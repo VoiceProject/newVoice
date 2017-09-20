@@ -1,8 +1,12 @@
 
+import FooterComponent from "./FooterComponent"
 class ActivityComponent extends React.Component{
     render(){
         return(
-           <div>this is ActivityComponent</div>
+           <div>this is ActivityComponent
+
+            <FooterComponent active="/activity"/>
+           </div>
         )
     }
 }

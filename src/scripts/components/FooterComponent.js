@@ -6,6 +6,7 @@ class FooterComponent extends React.Component{
         let {active}=this.props
         
         return(
+            <footer>
             <ul className="clearfix">
                 <a href="#/main" className={active=='/main'?'active':''}>
                     <span className="iconfont icon-shouye"></span>
@@ -28,6 +29,7 @@ class FooterComponent extends React.Component{
                     <span>我的</span>
                 </a>
             </ul>
+            </footer>
         )
     }
 }

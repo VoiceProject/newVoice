@@ -1,0 +1,95 @@
+.mainIndexBox{
+    width:100%;
+}
+.lunboBox{
+    width:100%;
+    .swiper-container--lunobo{
+        height: 1.4rem;
+        position: relative;
+        img{
+            width:100%;
+        }
+        .swiper-pagination{
+            padding-right:20px;
+            text-align:right;
+            .swiper-pagination-bullet{
+                width: 0.1rem;
+                height: 0.025rem;
+                border-radius: 0.2rem;
+                background-color: #d1d6df;
+            }
+            .swiper-pagination-bullet-active{
+                background-color: #2185cf;
+                width: 0.15rem
+            }
+        }
+    }
+    
+}
+.address_box{
+    padding:0 0.15rem;
+    height:0.54rem;
+    background:#fff;
+    width:100%;
+    display: flex;
+    a{
+        display: inline-block;
+        width:20%;
+        padding:0.15rem 0;
+        text-align: center;
+        
+        span{
+            width:100%;
+            display: inline-block;
+            height: 0.24rem;
+            line-height: 0.24rem;
+            border-right:1px solid #e8e8e8;
+            background:url(http://www.gd12355.org/wechat/public/img/indexAddress.png) no-repeat left center;
+            background-size: 0.12rem;
+        }
+    }
+    .address_box--right{
+        padding:0.12rem 0;
+        background: url(http://www.gd12355.org/wechat/public/img/next.png) no-repeat right center;
+        background-size: 0.07rem;
+        padding-left: 0.2rem;
+        width: 70%;
+        .swiper-container--news{
+            width:90%;
+            height: 100%;
+            overflow: hidden;
+            .address_box--slide{
+                display: flex;
+                height: 100%;
+                align-items: center;
+                img{
+                    width:0.3rem;
+                    display: inline-block;
+                    border-radius: 50%;
+                }
+                .address_box--word{
+                    flex:1 1;
+                    margin-left: 0.2rem;
+                    h5{
+                        white-space: nowrap;
+                        overflow: hidden;
+                        width:90%;
+                        height: 0.19rem;
+                        line-height: 0.19rem;
+                        font-size: 0.12rem;
+                        font-weight: normal;
+                        text-overflow: ellipsis;
+                    }
+                    p{
+                        font-size: 0.10rem;
+                        color:#999;
+                        position: relative;
+                        top:-3px;
+                    }
+                }
+               
+            }
+            
+        }
+    }
+}

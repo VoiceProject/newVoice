@@ -5388,15 +5388,12 @@ var FooterComponent = function (_React$Component) {
     _createClass(FooterComponent, [{
         key: "render",
         value: function render() {
-            var active = this.props.active;
-
-
             return React.createElement(
                 "ul",
                 { className: "clearfix" },
                 React.createElement(
-                    "a",
-                    { href: "#/main", className: active == '/main' ? 'active' : '' },
+                    _reactRouter.Link,
+                    { to: "/main", className: "active" },
                     React.createElement("span", { className: "iconfont icon-shouye" }),
                     React.createElement(
                         "span",
@@ -5405,8 +5402,8 @@ var FooterComponent = function (_React$Component) {
                     )
                 ),
                 React.createElement(
-                    "a",
-                    { href: "#/activity", className: active == '/activity' ? 'active' : '' },
+                    _reactRouter.Link,
+                    { to: "/activity" },
                     React.createElement("span", { className: "iconfont icon-qiqiusolid" }),
                     React.createElement(
                         "span",
@@ -5415,8 +5412,8 @@ var FooterComponent = function (_React$Component) {
                     )
                 ),
                 React.createElement(
-                    "a",
-                    { href: "#/consult", className: active == '/consult' ? 'active' : '' },
+                    _reactRouter.Link,
+                    { to: "/consult" },
                     React.createElement("span", { className: "iconfont icon-bf-message" }),
                     React.createElement(
                         "span",
@@ -5425,8 +5422,8 @@ var FooterComponent = function (_React$Component) {
                     )
                 ),
                 React.createElement(
-                    "a",
-                    { href: "#/help", className: active == '/help' ? 'active' : '' },
+                    _reactRouter.Link,
+                    { to: "/help" },
                     React.createElement("span", { className: "iconfont icon-aixin" }),
                     React.createElement(
                         "span",
@@ -5435,8 +5432,8 @@ var FooterComponent = function (_React$Component) {
                     )
                 ),
                 React.createElement(
-                    "a",
-                    { href: "#/mine", className: active == '/mine' ? 'active' : '' },
+                    _reactRouter.Link,
+                    { to: "/activity" },
                     React.createElement("span", { className: "iconfont icon-wode" }),
                     React.createElement(
                         "span",
@@ -5450,10 +5447,6 @@ var FooterComponent = function (_React$Component) {
 
     return FooterComponent;
 }(React.Component);
-
-FooterComponent.defaultProps = {
-    active: "/main"
-};
 
 exports.default = FooterComponent;
 
@@ -5535,7 +5528,7 @@ var MainComponent = function (_React$Component) {
             return React.createElement(
                 "div",
                 null,
-                "this is MainComponent"
+                "hello world\uFF01"
             );
         }
     }]);
@@ -5567,121 +5560,25 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var MineComponent = function (_React$Component) {
     _inherits(MineComponent, _React$Component);
 
-    function MineComponent(props, context) {
+    function MineComponent() {
         _classCallCheck(this, MineComponent);
 
-        var _this = _possibleConstructorReturn(this, (MineComponent.__proto__ || Object.getPrototypeOf(MineComponent)).call(this, props, context));
-
-        _this.state = {};
-        return _this;
+        return _possibleConstructorReturn(this, (MineComponent.__proto__ || Object.getPrototypeOf(MineComponent)).apply(this, arguments));
     }
 
     _createClass(MineComponent, [{
         key: "render",
         value: function render() {
-            console.log(this);
             return React.createElement(
                 "div",
-                { className: "full-height" },
-                React.createElement(
-                    "div",
-                    { className: "Mine_body" },
-                    React.createElement(
-                        "div",
-                        { className: "Mine_top" },
-                        React.createElement(
-                            "a",
-                            { href: "" },
-                            React.createElement("img", null)
-                        )
-                    ),
-                    React.createElement(
-                        "div",
-                        { className: "Mine_lunch" },
-                        React.createElement(
-                            "h2",
-                            null,
-                            "\u6211\u7684\u53D1\u5E03"
-                        ),
-                        React.createElement("span", null)
-                    ),
-                    React.createElement(
-                        "div",
-                        { className: "Mine_lunch" },
-                        React.createElement(
-                            "h2",
-                            null,
-                            "\u6211\u7684\u5173\u6CE8"
-                        ),
-                        React.createElement("span", null)
-                    ),
-                    React.createElement(
-                        "div",
-                        { className: "Mine_lunch" },
-                        React.createElement(
-                            "h2",
-                            null,
-                            "\u6211\u7684\u6536\u85CF"
-                        ),
-                        React.createElement("span", null)
-                    ),
-                    React.createElement(
-                        "div",
-                        { className: "Mine_lunch Mine_news" },
-                        React.createElement(
-                            "h2",
-                            null,
-                            "\u6211\u7684\u6D88\u606F"
-                        ),
-                        React.createElement("span", null)
-                    ),
-                    React.createElement(
-                        "div",
-                        { className: "Mine_lunch Mine_news" },
-                        React.createElement(
-                            "h2",
-                            null,
-                            "\u6211\u8981\u5410\u69FD"
-                        ),
-                        React.createElement("span", null)
-                    ),
-                    React.createElement(
-                        "div",
-                        { className: "Mine_lunch Mine_news" },
-                        React.createElement(
-                            "h2",
-                            null,
-                            "\u6211\u7684\u7B2C\u4E8C\u8BFE\u5802"
-                        ),
-                        React.createElement("span", null)
-                    ),
-                    React.createElement(
-                        "div",
-                        { className: "Mine_lunch Mine_news" },
-                        React.createElement(
-                            "h2",
-                            null,
-                            "\u7533\u8BF7\u6210\u4E3A\u54A8\u8BE2\u5BFC\u5E08"
-                        ),
-                        React.createElement("span", null)
-                    ),
-                    React.createElement(
-                        "div",
-                        { className: "Mine_bottom" },
-                        React.createElement("div", { className: "Mine_left" }),
-                        React.createElement("div", { className: "Mine_right" })
-                    )
-                )
+                null,
+                "this is MineComponent"
             );
         }
     }]);
 
     return MineComponent;
 }(React.Component);
-//定义默认属性
-
-
-MineComponent.defaultProps = {};
 
 exports.default = MineComponent;
 
@@ -5719,10 +5616,19 @@ var RootComponent = function (_React$Component) {
     _createClass(RootComponent, [{
         key: "render",
         value: function render() {
+            console.log(this);
             return React.createElement(
                 "div",
-                { className: "full-height" },
-                this.props.children
+                null,
+                React.createElement(
+                    "header",
+                    { className: "bar bar-nav" },
+                    React.createElement(
+                        "h1",
+                        null,
+                        "Latiao"
+                    )
+                )
             );
         }
     }]);
@@ -5802,7 +5708,7 @@ ReactDOM.render(React.createElement(
     )
 ), document.getElementById("app"));
 
-ReactDOM.render(React.createElement(_FooterComponent2.default, { active: location.hash }), document.getElementById("appFooter"));
+ReactDOM.render(React.createElement(_FooterComponent2.default, null), document.getElementById("appFooter"));
 
 /***/ }),
 /* 59 */

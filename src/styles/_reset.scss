@@ -1,6 +1,7 @@
 *{
     margin:0;
     padding:0;
+    box-sizing: border-box;
 }
 html,body{
     width:100%;
@@ -14,10 +15,22 @@ body{
     font-size: 14px;
     font-family: "微软雅黑";
     display: flex;
+    background: #e8e8e8;
 }
 a{
     text-decoration: none;
+    color:#000;
 }
 li{
     list-style: none;
+}
+#app{
+    width:100%;
+    overflow: hidden;
+}
+button,input{
+    outline: none;
+}
+button,img,input{
+    border:none;
 }
