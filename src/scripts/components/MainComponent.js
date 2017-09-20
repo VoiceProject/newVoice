@@ -1,9 +1,10 @@
 
+
 class MainComponent extends React.Component{
     render(){
         return(
             <div>
-                hello world！
+                this is MainComponent
             </div>
         )
     }

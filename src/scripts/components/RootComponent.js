@@ -1,4 +1,4 @@
-import FooterComponent from './FooterComponent'
+
 
 
 
@@ -12,24 +12,14 @@ class RootComponent extends React.Component {
     }
     
     render(){
-        console.log(this)
         return (
             <div>
-               <header className="bar bar-nav">
-                    {/* <a className="icon icon-me pull-left open-panel"></a> */}
-                    <h1>Latiao</h1>
-                </header>
-
-                <FooterComponent/>
+               {this.props.children}
             </div>
         )
     }
 }
 //定义默认属性
-RootComponent.defaultProps={
-
-}
-
 
 
 export default RootComponent
