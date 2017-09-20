@@ -13,7 +13,7 @@ class RootComponent extends React.Component {
     
     render(){
         return (
-            <div>
+            <div className="full-height">
                {this.props.children}
             </div>
         )
