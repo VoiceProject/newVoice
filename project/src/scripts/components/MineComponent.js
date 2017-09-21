@@ -37,13 +37,7 @@ class MineComponent extends React.Component {
         })
         }                   
     }
-    gotoregister(hash,e){
-        console.log(e);
-        // e.nativeEvent.stopImmediatePropagation();
-        e.stopPropagation();
-        e.cancelBubble=true;
-        location.href=hash+"?_k=72b3ot";
-    }
+   
     render(){
         // console.log(this)
         return (
@@ -53,8 +47,8 @@ class MineComponent extends React.Component {
                         <a className="Mine_a" href="">
                             <img/>
                             <span>
-                               <button> <Link to="/activity">登录</Link></button>
-                                <button><Link to="/activity">注册</Link></button>
+                               <button> <Link to="/login">登录</Link></button>
+                                <button><Link to="/register">注册</Link></button>
                             </span>
                         </a>
                     </div>

@@ -17,6 +17,8 @@ import ConsultComponent from './scripts/components/ConsultComponent'
 import HelpComponent from './scripts/components/HelpComponent'
 import MineComponent from './scripts/components/MineComponent'
 import SearchAddress from './scripts/components/SearchAddress'
+import RegisterComponent from './scripts/components/MineComponent/RegisterComponent'
+import LoginComponent from './scripts/components/MineComponent/LoginComponent'
 // {/* <IndexRedirect to="/main"/> */}
 ReactDOM.render(
     
@@ -30,6 +32,8 @@ ReactDOM.render(
             <Route path="/help" component={HelpComponent}></Route>
             <Route path="/mine" component={MineComponent}></Route>
             <Route path="/searchaddress" component={SearchAddress}></Route>
+            <Route path="/register" component={RegisterComponent}></Route>            
+            <Route path="/login" component={LoginComponent}></Route>            
             <Route path="*" component={MainComponent}></Route>
 
         </Route>
