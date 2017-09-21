@@ -55,7 +55,6 @@ class MineComponent extends React.Component {
                             <span>
                                <button> <Link to="/activity">登录</Link></button>
                                 <button><Link to="/activity">注册</Link></button>
-                                <p>规范环境发生的说法</p>
                             </span>
                         </a>
                     </div>
