@@ -9,15 +9,20 @@ class LunchComponent extends React.Component {
           showphone:false,
           showpsd:false,
           psd:'',
-          showpsdagain:false
+          showpsdagain:false,
+          randStr:""
         }
+    }
+    componentWillMount(){
+        this.randCode()
     }
     phone(e){        
         let reg=/^1\d{10}$/;
         // console.log(typeof(e.target.value))        
         if(reg.test(e.target.value)){
             this.setState({
-                phonenum:e.target.value
+                phonenum:e.target.value,
+                showphone:false
             })
         }else{
             this.setState({
@@ -29,7 +34,8 @@ class LunchComponent extends React.Component {
        let reg=/\w{6,16}/
         if(reg.test(e.target.value)){
             this.setState({
-                psd:e.target.value
+                psd:e.target.value,
+                showpsd:false
             })
         }else{
             this.setState({
@@ -42,7 +48,37 @@ class LunchComponent extends React.Component {
            this.setState({
                 showpsdagain:true
            })
+       }else{
+            this.setState({
+                showpsdagain:false
+        })
        }
+   }
+   checkCode(e){
+       let inpStr=e.target.value.toLowerCase()
+       if(inpStr==this.state.randStr.toLowerCase()){
+           alert("true")
+       }else{
+           alert("false")
+       }
+   }
+   randCode(){
+       let str1=String.fromCharCode(this.newCharCode())
+       let str2=String.fromCharCode(this.newCharCode())
+       let str3=String.fromCharCode(this.newCharCode())
+       let str4=String.fromCharCode(this.newCharCode())
+       let conectStr=str1+""+str2+""+str3+""+str4
+       this.setState({
+            randStr:conectStr
+       })
+       
+   }
+   newCharCode(){
+        var num;
+       do{
+           num= Math.floor(Math.random()*123)
+       }while(!((num>=97&&num<=122)||(num>=65&&num<=90)||(num>=48&&num<=57)))
+       return num;
    }
     render(){
         let {showpsd,showphone,showpsdagain}=this.state; 
@@ -67,7 +103,10 @@ class LunchComponent extends React.Component {
               {showpsdagain?<span className="login_alt">密码不一致</span>:""}
              <div className="login_info">             
                 <label>验证码</label>             
-                <input type="text" onBlur={this.psd} required placeholder="请输入4位验证码"/>
+                <input type="text" onBlur={this.checkCode.bind(this)} required placeholder="请输入4位验证码"/>
+                <div className="login_info__randCode" onClick={this.randCode.bind(this)}>
+                    {this.state.randStr}
+                </div>
              </div>
              <div className="login_checkbox">
                  <input type="checkbox" checked/>

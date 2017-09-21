@@ -1,5 +1,7 @@
 import Fetch from '../../modules/fetch'
 
+
+
 class AddressBox extends React.Component{
     constructor(props,context){
         super(props,context)
@@ -9,14 +11,17 @@ class AddressBox extends React.Component{
     }
     componentWillMount(){
         this.getImage()
+        // console.log(this.props)
+    }
+    componentWillReceiveProps(props,state){
+        // console.log(props.position_info)
     }
     getImage(){
         let that = this
         let time= new Date().getTime()
-        console.log(time)
         Fetch.Get("http://api.12355.net/pc/service/index?page=0&rows=6&_="+time+"",{
         }).then(res=>{return res.json()}).then(json=>{
-            console.log(json)
+            // console.log(json)
             that.setState({
                 newsArr:json.rows
             })
@@ -46,8 +51,8 @@ class AddressBox extends React.Component{
         return(
             <div className="address_box">
                 <a href="#/searchaddress">
-                    <span>
-                        茂名
+                    <span className="address_box--wordSpan">
+                        {this.props.position_info.districtName}
                     </span>
                 </a>
                 <div className="address_box--right">

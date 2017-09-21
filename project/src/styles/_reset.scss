@@ -16,6 +16,7 @@ body{
     font-family: "微软雅黑";
     display: flex;
     background: #e8e8e8;
+    
 }
 a{
     text-decoration: none;
@@ -26,7 +27,8 @@ li{
 }
 #app{
     width:100%;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 button,input{
     outline: none;

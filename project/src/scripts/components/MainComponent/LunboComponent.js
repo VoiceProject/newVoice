@@ -22,11 +22,11 @@ class LunboComponent extends React.Component{
     getImage(){
         let that = this
         let time = new Date().getTime()
-        console.log(time)
+        // console.log(time)
         if(that.state.imgArr.length==0){
-            Fetch.Get("http://api.12355.net/imageManager/findImageByType?did=440000&type=1&acticey=0&_="+time+"",{
+            Fetch.Get("http://api.12355.net/imageManager/findImageByType?did="+that.props.position_info.did+"&type=1&acticey=0&_="+time+"",{
             }).then(res=>{return res.json()}).then(json=>{
-                console.log(json)
+                // console.log(json)
                     that.setState({
                         imgArr:json.dataList
                     })
@@ -60,19 +60,20 @@ class LunboComponent extends React.Component{
             </div>
         )
     }
-    componentDidMount(){
+    compoentDidMount(){
+             
+    }
+    componentDidUpdate(){
         this.state.swiper = new Swiper ('.swiper-container--lunobo', {
             direction: 'horizontal',
             autoplay:3000,
             paginationClickable:true,
-            // loop:true,
+             loop:true,
             // 如果需要分页器
             pagination: '.swiper-pagination',
-            autoplayDisableOnInteraction:false,
+            // autoplayDisableOnInteraction:false,
         
-          })        
-    }
-    componentDidUpdate(){
+          })  
         this.state.swiper.update()
     }
     

@@ -6,7 +6,10 @@ const dispatcher=new Dispatcher()
 import store from './store'
 dispatcher.register((action)=>{
     switch(action.type){
-        case 'CHECK_ACTIVE':
-            store.changeActive()
+        case 'CHANGE_POSITION':
+            console.log(action.info,"dispatcher")
+            store.changePositionInfo(action.info)
     }
 })
+
+export default dispatcher

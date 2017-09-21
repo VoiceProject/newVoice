@@ -1,6 +1,7 @@
 
 import Fetch from "../modules/fetch"
-
+import store from '../flux/store'
+import actions from '../flux/actions'
 class SearchAddress extends React.Component{
     constructor(props,context){
         super(props,context)
@@ -16,10 +17,10 @@ class SearchAddress extends React.Component{
         this.getCity()
         this.getSchool()
     }
+    
     getCity(){
         let time =new Date().getTime()
         Fetch.Get("http://api.12355.net/common/district/getDistrictByType?page=1&rows=100&type=1&parentDid=440000&_="+time+"",{}).then(res=>{return res.json()}).then(data=>{
-            console.log(data)
             this.setState({
                 city:data.rows
             })
@@ -28,7 +29,6 @@ class SearchAddress extends React.Component{
     getSchool(){
         let time =new Date().getTime()
         Fetch.Get("http://api.12355.net/common/district/getDistrictByType?page=1&rows=50&type=2&parentDid=440000&_="+time+"",{}).then(res=>{return res.json()}).then(data=>{
-            console.log(data)
             // this.props.allSchool=data.rows
             this.setState({
                 allSchool:data.rows,
@@ -36,12 +36,24 @@ class SearchAddress extends React.Component{
             })
         })
     }
+    changePosition(position_info){
+        
+        let info ={
+            districtName:position_info.districtName,
+            did:position_info.did
+        }
+       
+        actions.changePosition(info)
+        location.hash="/main"
+    }
     showView(arr){
         let tagArr=[]
+        let that=this
         arr.forEach(ele=>{
+            
             tagArr.push(
-                <li data-id={ele.did} className="item-li">
-                    <a href="#/main">
+                <li data-id={ele.did} className="item-li" onClick={that.changePosition.bind(that,ele)}>
+                    <a>
                     {ele.districtName}
                     </a>
                 </li>
@@ -87,7 +99,7 @@ class SearchAddress extends React.Component{
                     <button className={this.state.isCity?"":"on"} onClick={this.changeComponent.bind(this,"school")}>高校</button>
                 </div>
                 <div className="address__title">
-                    <span>广东</span>
+                    <span>{store.position_info.districtName}</span>
                 </div>
                 <div className="address__body">
                 
