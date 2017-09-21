@@ -1,0 +1,183 @@
+//  @import './_mixin' ;
+.show{
+    display:block;
+}
+.hide{
+    display:none;
+}
+.Mine_body{
+    background:#e8e8e8;
+    width:100%;
+    height:100%;   
+    position:relative;    
+    .Mine_top{
+            padding:0.15rem;
+            background:#fff;
+            .Mine_a{
+                display: block;
+                // @include pic('/build/img/next.png');
+                  background: url(http://www.gd12355.org/wechat/public/img/next.png) no-repeat right center;
+                    background-size:0.07rem;
+                    display:flex;
+                    justify-content: space-between;
+                    padding-right:0.1rem;
+                    span{
+                        display:flex;
+                        align-items: center;
+                    }
+                    button{
+                        width:0.55rem;
+                        height:0.35rem;
+                        border-radius:0.15rem;
+                        margin-right:0.1rem;
+                        border:none;
+                        background-color:#12b7f5;
+                        color:#fff;
+                        outline: none;
+                    }
+            }
+            img{
+                height:0.6rem;
+                width:0.6rem;
+                border-radius:50%;
+            }
+        }
+    .Mine_lunch{
+        padding:0.1rem 0.15rem;
+        background:#fff;
+        margin:0.25rem 0 0;
+        display:flex;
+        justify-content: space-between;
+        span{ 
+             background: url(http://www.gd12355.org/wechat/public/img/next.png) no-repeat center;  
+            background-size:0.07rem;                        
+             display:block;
+             width:0.16rem; 
+        }
+        .spanone{
+             background: url(http://www.gd12355.org/wechat/public/img/downArrow.png) no-repeat center;  
+             background-size:0.12rem;           
+        } 
+        .spantwo{
+            background: url(http://www.gd12355.org/wechat/public/img/up.png) no-repeat center;  
+             background-size:0.12rem; 
+        }
+        .lunch{
+            background:url(http://www.gd12355.org/wechat/public/img/wodefabu.png) no-repeat left center;  
+            background-size:0.2rem;          
+        }
+        .guanzhu{                                 
+            background:url(http://www.gd12355.org/wechat/public/img/guanzhu.png) no-repeat left center;
+             background-size:0.2rem;             
+        }
+        .collection{
+            
+            background:url(http://www.gd12355.org/wechat/public/img/wodeshoucang.png) no-repeat left center;
+             background-size:0.2rem;                        
+        }
+        .news{            
+            background:url(http://www.gd12355.org/wechat/public/img/wodexiaoxi.png) no-repeat left center;
+            background-size:0.2rem;
+        }
+        .ques{
+             
+            background:url(http://www.gd12355.org/wechat/public/img/wodetiwen.png) no-repeat left center;
+            background-size:0.2rem;
+        }
+        .my2ndclass{
+            
+            background:url(http://www.gd12355.org/wechat/public/img/my_2nd_class.png) no-repeat left center;
+            background-size:0.2rem; 
+        }
+        .apply{
+             
+            background:url(http://www.gd12355.org/wechat/public/img/apply_teacher.png) no-repeat left center;
+            background-size:0.2rem;
+        }
+         h2{
+            color:#333;
+            padding-left:0.3rem;
+            font-size:0.15rem;
+            height:100%;                                                         
+            font-weight:normal;
+        }
+    }
+    
+    .Mine_news{
+            margin:0;
+             border-top: 1px solid #e2e2e2;
+        }
+    .Mine_bottom{
+        position:absolute;
+        bottom:0;
+        width:100%;
+        padding:0.15rem 0;
+        background:#f0f0f0;
+        z-index:501;
+        display:flex;
+        justify-content:space-between;
+        i{
+            width:0.75rem;
+            display:flex;
+            align-items: center;
+            justify-content: space-around;
+            span{
+                 font-size:28px;
+                color:#bababa;
+            }          
+            img{
+                width:0.43rem;
+                height:0.43rem;
+                border-radius:50%;
+            }
+        }
+        .Mine_left{
+            flex-grow:1;
+            display:flex;
+            flex-direction:column;
+            padding-left:0.15rem;
+            justify-content: space-around;
+            h3{
+                font-weight:normal;
+                font-size: 17px;
+                color: #000;
+            }
+            p{
+                font-size: 14px;
+                color: #777;
+            }
+        }
+        .Mine_right{
+            width:0.75rem;
+            display:flex;
+            flex-direction:column;
+            justify-content: space-around;
+            align-items: center;
+            u{
+                font-size:30px;
+                color:#12b7f5;
+            }
+        }
+    }
+}
+.Mine_uplist{
+    height:0.68rem;
+    background:#fff;
+    display:flex;
+    align-items: center;
+    border-top: 1px solid #e2e2e2;    
+    li{
+        width:25%;
+        display:flex;
+        flex-direction:column;
+        justify-content: space-around;
+        align-items: center;
+        img{
+            width:0.2rem;
+        }
+        span{
+            font-size:0.12rem;
+            padding-top:0.06rem;
+        }
+    }
+}
