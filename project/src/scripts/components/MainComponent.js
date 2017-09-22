@@ -28,7 +28,7 @@ class MainComponent extends React.Component{
     }
     render(){
         let {position_info}=this.state
-        console.log(this.state)
+       
         return(
             <div className="full-height mainIndexBox">
                 <div id="mainLunbo">
