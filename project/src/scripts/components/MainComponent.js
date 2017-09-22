@@ -4,6 +4,8 @@ import LunboComponent from "./MainComponent/LunboComponent.js"
 import AddressBox from "./MainComponent/AddressBox.js"
 import MainActivityComponent from "./MainComponent/MainActivityComponent.js"
 import MainPhotoMenu from "./MainComponent/MainPhotoMenu.js"
+import TuijianActivityComponent from "./MainComponent/TuijianActivityComponent.js"
+import TuijianProjectComponent from "./MainComponent/TuijianProjectComponent.js"
 
 import Fetch from '../modules/fetch'
 import store from '../flux/store'
@@ -16,7 +18,8 @@ class MainComponent extends React.Component{
         this.state=JSON.stringify(store.getPositionInfo())=="{}"?{
             position_info:{
                 districtName:"广东",
-                did:440000
+                did:440000,
+                nowTime:new Date().getTime()
             }
         }:{
             position_info:store.getPositionInfo()
@@ -38,6 +41,8 @@ class MainComponent extends React.Component{
                     <MainActivityComponent/>
                 </div>
                 <MainPhotoMenu/>
+                <TuijianActivityComponent position_info={position_info}/>
+                <TuijianProjectComponent position_info={position_info}/>
                 <FooterComponent active="/main"/>
             </div>
             

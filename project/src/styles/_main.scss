@@ -1,10 +1,11 @@
 .mainIndexBox{
     width:100%;
+    
 }
 .lunboBox{
     width:100%;
     .swiper-container--lunobo{
-        height: 1.4rem;
+        min-height: 1.4rem;
         position: relative;
         img{
             width:100%;
@@ -191,6 +192,7 @@
 .main_photoMenu{
     background:#fff;
     overflow: hidden;
+    margin-bottom:0.25rem;
     >div{
         float: left;
         a{
@@ -236,6 +238,131 @@
                 margin-bottom:0px;
                 img{
                     width:1.2rem;
+                }
+            }
+        }
+    }
+}
+
+
+.Main_tuijian_box{
+    padding:0 0.15rem;
+    ul{
+        li{
+            display: flex;
+            border-bottom: 1px solid #e2e2e2;
+            padding:0.15rem 0;
+            .Main_tuijian_box__item--left{
+                position: relative;
+                width:1rem;
+                height: 0.8rem;
+                margin-right: 0.1rem;
+                img{
+                    width:1rem;
+                    height: 0.8rem;
+                }
+                span{
+                    position: absolute;
+                    display: inline-block;
+                    width:100%;
+                    height:0.19rem;
+                    line-height: 0.19rem;
+                    text-align: center;
+                    background-color: #0064B6;
+                    color:#FFF;
+                    font-size:10px;
+                    bottom:3px;
+                    opacity: 0.8;
+                    left:0px;
+                }
+            }
+            .Main_tuijian_box__item--right{
+                h3{
+                    font-size: 0.15rem;
+                    font-weight: normal;
+                    width: 2.3rem;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                p{
+                    font-size: 0.12rem;
+                }
+                p:nth-of-type(1){
+                    color: #2185cf;
+                    margin-top: 0.11rem;
+                    
+                }
+                p:nth-of-type(2){
+                    color: #999;
+                }
+                p:nth-of-type(3){
+                    color: #999;
+                    width: 2.3rem;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}
+
+.Main_tuijian_box__title{
+    height: 0.5rem;
+    line-height: 0.5rem;
+    background: url(/img/next.png) no-repeat right center;
+    background-size: 0.07rem 0.13rem;
+    font-size: 0.15rem;
+    font-weight: normal;
+}
+
+.MainProject_box{
+    padding:0 0.15rem;
+    ul{
+        li{
+            border-bottom: 1px solid #e2e2e2;
+            padding:0.15rem 0;
+            .Main_project_box__item--top{
+                width:3.45rem;
+                height: 1rem;
+                img{
+                    width:3.45rem;
+                    height: 1rem;
+                }
+            }
+            .Main_project_box__item--bottom{
+                line-height: 0.15rem;
+               overflow: hidden;
+                margin-top: 0.15rem;
+                span{
+                    display: inline-block;
+                    float:left;
+                }
+                span.word-green{
+                    color:#33cc33;
+                }
+                span.word-gary{
+                    color: #ccc;
+                }
+                span:nth-of-type(1){
+                    font-size: 0.15rem;
+                    color: #2185cf;
+                    margin-right: 0.1rem;
+                }
+                span:nth-of-type(2){
+                    width: 62%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    font-size: 0.15rem;
+                    color: #000;
+                }
+                span:nth-of-type(3){
+                    float: right;
+                    height: 0.16rem;
+                    line-height: 0.16rem;
+                    font-size: 0.12rem;
                 }
             }
         }

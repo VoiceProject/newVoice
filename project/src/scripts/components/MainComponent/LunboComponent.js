@@ -20,11 +20,11 @@ class LunboComponent extends React.Component{
         this.getImage()
     }
     getImage(){
-        let that = this
-        let time = new Date().getTime()
+        let that=this
         // console.log(time)
+        
         if(that.state.imgArr.length==0){
-            Fetch.Get("http://api.12355.net/imageManager/findImageByType?did="+that.props.position_info.did+"&type=1&acticey=0&_="+time+"",{
+            Fetch.Get("http://api.12355.net/imageManager/findImageByType?did="+that.props.position_info.did+"&type=1&acticey=0&_="+that.props.position_info.nowTime+"",{
             }).then(res=>{return res.json()}).then(json=>{
                 // console.log(json)
                     that.setState({

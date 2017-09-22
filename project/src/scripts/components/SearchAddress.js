@@ -40,7 +40,8 @@ class SearchAddress extends React.Component{
         
         let info ={
             districtName:position_info.districtName,
-            did:position_info.did
+            did:position_info.did,
+            nowTime:new Date().getTime()
         }
        
         actions.changePosition(info)

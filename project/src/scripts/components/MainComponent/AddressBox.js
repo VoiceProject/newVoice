@@ -17,15 +17,13 @@ class AddressBox extends React.Component{
         // console.log(props.position_info)
     }
     getImage(){
-        let that = this
-        let time= new Date().getTime()
-        Fetch.Get("http://api.12355.net/pc/service/index?page=0&rows=6&_="+time+"",{
+        let that=this
+        Fetch.Get("http://api.12355.net/pc/service/index?page=0&rows=6&_="+that.props.position_info.nowTime+"",{
         }).then(res=>{return res.json()}).then(json=>{
             // console.log(json)
             that.setState({
                 newsArr:json.rows
             })
-
         })
     }
     toUrl(quId,username){

@@ -12,9 +12,11 @@ class RootComponent extends React.Component {
     }
     
     render(){
+        // console.log(this.props.children)
         return (
             <div className="full-height">
                {this.props.children}
+               
             </div>
         )
     }
