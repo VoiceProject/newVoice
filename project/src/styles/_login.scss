@@ -23,6 +23,21 @@
         line-height:0.56rem;
         border-bottom:solid 1px #dfdfdf;
         display:flex;
+        align-items: center;
+        .login_fourcode{
+            width:1.5rem;
+        }
+        .login_info__randCode{
+            width:0.8rem;
+            margin-right:0.2rem;
+            border-radius: 0.08rem;
+            box-shadow:0px 0px 3px 2px #aaa inset;
+            height:0.36rem;
+            font-style: italic;
+            text-align: center;
+            line-height:0.36rem;
+            font-size:0.15rem;
+        }
     }
     label{
         font-size: 0.16rem;

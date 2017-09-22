@@ -1,5 +1,5 @@
 
-
+import fetch from '../../modules/fetch'
 class LunchComponent extends React.Component {   
     constructor(props,context){
         super(props,context)
@@ -10,11 +10,34 @@ class LunchComponent extends React.Component {
           showpsd:false,
           psd:'',
           showpsdagain:false,
-          randStr:""
+          randStr:"",
+          showcode:false,
+          showjson:false,
+           checkInp:true
         }
     }
     componentWillMount(){
         this.randCode()
+    }
+    setData(){
+        let that=this;
+        let {phonenum,psd,randStr,showpsd,showphone,showpsdagain,showcode,checkInp}=this.state; 
+        if((phonenum!='')&&(psd!='')&&(randStr!='')&&(showpsd==false)&&(showphone==false)&&(showpsdagain==false)&&(showcode==false)&&(checkInp==true)){
+            fetch.Post("http://datainfo.duapp.com/shopdata/userinfo.php",{status:"register",userID:phonenum,password:psd}).then(res=>{
+            return res.json()
+        }).then(json=>{
+            // console.log(json)
+            if(json==1){
+                window.location="/";
+            }
+            if(json==0){
+                that.setState({
+                    showjson:true
+                })
+            }
+        })
+        }
+        
     }
     phone(e){        
         let reg=/^1\d{10}$/;
@@ -57,9 +80,13 @@ class LunchComponent extends React.Component {
    checkCode(e){
        let inpStr=e.target.value.toLowerCase()
        if(inpStr==this.state.randStr.toLowerCase()){
-           alert("true")
+            this.setState({
+               showcode:false
+           })
        }else{
-           alert("false")
+           this.setState({
+               showcode:true
+           })
        }
    }
    randCode(){
@@ -70,8 +97,7 @@ class LunchComponent extends React.Component {
        let conectStr=str1+""+str2+""+str3+""+str4
        this.setState({
             randStr:conectStr
-       })
-       
+       })       
    }
    newCharCode(){
         var num;
@@ -80,8 +106,13 @@ class LunchComponent extends React.Component {
        }while(!((num>=97&&num<=122)||(num>=65&&num<=90)||(num>=48&&num<=57)))
        return num;
    }
+     changeCheckbox(){
+       this.setState({
+           checkInp:!this.state.checkInp
+       })
+   }
     render(){
-        let {showpsd,showphone,showpsdagain}=this.state; 
+        let {showpsd,showphone,showpsdagain,showcode,showjson}=this.state; 
                      
         return (
            <div className="login_full">
@@ -91,6 +122,7 @@ class LunchComponent extends React.Component {
                 <input type="text" required placeholder="请输入登录账号或手机号码" onBlur={this.phone.bind(this)}/>
              </div>             
              {showphone?<span className="login_alt">请输入正确的手机号</span>:""}
+             {showjson?<span className="login_alt">该手机号已经注册过啦</span>:""}
              <div className="login_info">             
                 <label>密码</label>             
                 <input type="text" onBlur={this.psd.bind(this)} required placeholder="请输入用户密码"/>
@@ -103,17 +135,18 @@ class LunchComponent extends React.Component {
               {showpsdagain?<span className="login_alt">密码不一致</span>:""}
              <div className="login_info">             
                 <label>验证码</label>             
-                <input type="text" onBlur={this.checkCode.bind(this)} required placeholder="请输入4位验证码"/>
+                <input type="text" className="login_fourcode" onBlur={this.checkCode.bind(this)} required placeholder="请输入4位验证码"/>
                 <div className="login_info__randCode" onClick={this.randCode.bind(this)}>
                     {this.state.randStr}
                 </div>
              </div>
+             {showcode?<span className="login_alt">验证码错误</span>:""}
              <div className="login_checkbox">
-                 <input type="checkbox" checked/>
+                 <input type="checkbox" onClick={this.changeCheckbox.bind(this)} checked={this.state.checkInp?"checked":""}/>
                  <span>阅读并接受<a href="http://www.gd12355.org/wechat/view/logoin/user_Agreement.html" target="_blank">《青年之声用户服务协议》</a></span>
              </div>
              <div className="login_box">
-                <a href="/" className="login_go">提交，现在就去青年之声</a>       
+                <a className="login_go" onClick={this.setData.bind(this)}>提交，现在就去青年之声</a>       
                 <a href="#/login">我已经注册过了，马上登录</a>
              </div>
           </div>
