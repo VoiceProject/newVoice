@@ -1,7 +1,9 @@
+import Loginbtn from './MineComponent/Loginbtn.js';
+import Userinfo from './MineComponent/Userinfo.js';
+import LunchComponent from './MineComponent/LunchComponent';
+import FooterComponent from "./FooterComponent";
+import {connect} from 'react-redux';
 
-import LunchComponent from './MineComponent/LunchComponent.js';
-import FooterComponent from "./FooterComponent"
-import {Link} from 'react-router';
 class MineComponent extends React.Component {   
     constructor(props,context){
         super(props,context)
@@ -37,19 +39,22 @@ class MineComponent extends React.Component {
         })
         }                   
     }
-   
+//     login(info){
+//     	// console.log(info)
+//     	this.props.changeUserInfo(info)
+// //  	actions.changeUserInfo(info)
+//     }
     render(){
-        // console.log(this)
+        console.log(this.props)
+        let {userInfo}=this.props
         return (
             <div className="full-height">
                 <div className="Mine_body">
                     <div className="Mine_top">
                         <a className="Mine_a" href="">
-                            <img/>
-                            <span>
-                               <button> <Link to="/login">登录</Link></button>
-                                <button><Link to="/register">注册</Link></button>
-                            </span>
+                            {
+                                userInfo.name?<Userinfo/>: <Loginbtn/>
+                            }
                         </a>
                     </div>
                     <div className="Mine_list">
@@ -139,6 +144,12 @@ MineComponent.defaultProps={
 
 }
 
+const mapDispatchToProps = (dispatch)=>{
+	return {
+		changeUserInfo:(info)=>{
+			dispatch({type:'CHANGE_USER_INFO',info:info})
+		}
+	}
+}
 
-
-export default MineComponent
+export default connect(state=>state,mapDispatchToProps)(MineComponent)

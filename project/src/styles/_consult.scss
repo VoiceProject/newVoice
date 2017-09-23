@@ -1,0 +1,39 @@
+.consult_body{
+    background:#e8e8e8;
+}
+.consult_banner{
+    width:100%;
+    margin-bottom:0.1rem;
+    img{
+        width:100%;
+    }
+}
+.consult_ques{
+    display:flex;
+    align-items: center;
+    padding:0 0.2rem;
+    background:#fff;
+    margin-bottom:0.15rem;
+    a{
+        flex:1;
+        display:block;
+        text-align: center;
+        margin:0.13rem 0.05rem;
+        padding:0.08rem 0;
+        padding-left:0.3rem;
+        border-right:solid 1px #e8e8e8;
+    }
+    .dajia{
+        background:url(/img/dajia.png) no-repeat left center;
+        background-size:0.27rem;
+    }
+    .zuzhi{
+        background:url(/img/zuzhi.png) no-repeat left center;
+        background-size:0.27rem;        
+    }
+    .zhuanjia{
+        background:url(/img/zhuanjia.png) no-repeat left center;
+        background-size:0.27rem;  
+        border-right:none; 
+    }
+}

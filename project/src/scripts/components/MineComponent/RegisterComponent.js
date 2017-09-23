@@ -28,7 +28,7 @@ class LunchComponent extends React.Component {
         }).then(json=>{
             // console.log(json)
             if(json==1){
-                window.location="/";
+                window.location="#/login";
             }
             if(json==0){
                 that.setState({
@@ -111,12 +111,18 @@ class LunchComponent extends React.Component {
            checkInp:!this.state.checkInp
        })
    }
+     go(){
+        window.history.back();  
+    }
     render(){
         let {showpsd,showphone,showpsdagain,showcode,showjson}=this.state; 
                      
         return (
            <div className="login_full">
-             <p>我和你之间就差这一步了，别走</p>
+            <div className="login_top">
+                <span onClick={this.go}></span>
+                <p>我和你之间就差这一步了，别走</p>
+             </div>
              <div className="login_info">
                 <label>手机号</label>
                 <input type="text" required placeholder="请输入登录账号或手机号码" onBlur={this.phone.bind(this)}/>

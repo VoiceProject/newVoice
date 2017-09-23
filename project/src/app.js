@@ -19,9 +19,11 @@ import MineComponent from './scripts/components/MineComponent'
 import SearchAddress from './scripts/components/SearchAddress'
 import RegisterComponent from './scripts/components/MineComponent/RegisterComponent'
 import LoginComponent from './scripts/components/MineComponent/LoginComponent'
+import {Provider} from 'react-redux'
+import store from './scripts/redux/store'
 // {/* <IndexRedirect to="/main"/> */}
 ReactDOM.render(
-    
+ <Provider store={store}>
     <Router history={hashHistory}>
         <Route path="/" component={RootComponent}>
             
@@ -39,7 +41,7 @@ ReactDOM.render(
         </Route>
         
     </Router>
-    
+  </Provider>  
     ,document.getElementById("app"))
 
 

@@ -1,6 +1,22 @@
 .login_full{
     height:100%;
     background:#e8e8e8;
+    .login_top{
+        height:0.44rem;
+        line-height:0.44rem;
+        background: #333;
+        display:flex;
+        span{
+            background: url(/img/next.png) no-repeat right center;
+            width:0.26rem;
+        }
+        p{       
+            text-align: center;       
+            color:#fff;
+            font-size:0.16rem; 
+            flex-grow: 1;     
+        }
+    }
     .login_alt{
         background:#fff;
         padding:0.1rem 0.25rem;
@@ -8,14 +24,7 @@
         color:#f9cc9d;
         border-bottom:solid 1px #dfdfdf;
     }
-    p{
-        height:0.44rem;
-        text-align: center;
-        background: #333;
-        color:#fff;
-        font-size:0.16rem;
-        line-height:0.44rem;
-    }
+    
     .login_info{
         background:#fff;
         padding-left:0.15rem;
