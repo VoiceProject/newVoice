@@ -20,7 +20,7 @@ import SearchAddress from './scripts/components/SearchAddress'
 import RegisterComponent from './scripts/components/MineComponent/RegisterComponent'
 import LoginComponent from './scripts/components/MineComponent/LoginComponent'
 import {Provider} from 'react-redux'
-import store from './scripts/redux/store'
+import store from './scripts/userredux/store'
 // {/* <IndexRedirect to="/main"/> */}
 ReactDOM.render(
  <Provider store={store}>

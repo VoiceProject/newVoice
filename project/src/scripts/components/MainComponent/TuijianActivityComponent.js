@@ -25,6 +25,10 @@ class TuijianActivityComponent extends React.Component{
                 str="报名中"
             }else if(ele.actStatus==4){
                 str="报名结束"
+            }else if(ele.actStatus==5){
+                str="已满员"
+            }else if(ele.actStatus==3){
+                str="活动中"
             }
             arr.push(<li>
                 <div className="Main_tuijian_box__item--left">

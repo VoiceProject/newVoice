@@ -6,25 +6,21 @@ import MainActivityComponent from "./MainComponent/MainActivityComponent.js"
 import MainPhotoMenu from "./MainComponent/MainPhotoMenu.js"
 import TuijianActivityComponent from "./MainComponent/TuijianActivityComponent.js"
 import TuijianProjectComponent from "./MainComponent/TuijianProjectComponent.js"
+import MainQuestionComponent from "./MainComponent/MainQuestionComponent.js"
+import MainHelpComponent from "./MainComponent/MainHelpComponent.js"
+
+
 
 import Fetch from '../modules/fetch'
 import store from '../flux/store'
-import actions from '../flux/actions'
-
+import actions from "../flux/actions"
 
 class MainComponent extends React.Component{
     constructor(props,context){
         super(props,context)
-        this.state=JSON.stringify(store.getPositionInfo())=="{}"?{
-            position_info:{
-                districtName:"广东",
-                did:440000,
-                nowTime:new Date().getTime()
-            }
-        }:{
+        this.state={
             position_info:store.getPositionInfo()
         }
-        // console.log(store.getPositionInfo(),"mainComponent")
     }
     render(){
         let {position_info}=this.state
@@ -43,6 +39,15 @@ class MainComponent extends React.Component{
                 <MainPhotoMenu/>
                 <TuijianActivityComponent position_info={position_info}/>
                 <TuijianProjectComponent position_info={position_info}/>
+                <MainQuestionComponent/>
+                <MainHelpComponent/>
+                <div className="copyWord bg-white">
+                    <p>
+                    技术支持：广东汇青信息科技有限公司  
+                    <br/>
+                    客服邮箱：kf@12355.net
+                    </p>
+                </div>
                 <FooterComponent active="/main"/>
             </div>
             

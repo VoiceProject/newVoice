@@ -1,7 +1,11 @@
 import Searchinput from './HelpComponent/Searchinput.js'
 import Helpmore from './HelpComponent/helpmore'
 import FooterComponent from "./FooterComponent"
+import ConsultQuestionComponent from "./ConsultComponent/ConsultQuestionComponent.js"
+
 import Fetch from '../modules/fetch'
+
+
 class ConsultComponent extends React.Component{
     constructor(props,context){
         super(props,context)
@@ -38,6 +42,7 @@ class ConsultComponent extends React.Component{
                 <a className="zhuanjia">问专家</a>
             </div>
             <Helpmore data={this.state.datainfo}/>
+            <ConsultQuestionComponent/>
             <FooterComponent active="/consult"/>
            </div>
         )
