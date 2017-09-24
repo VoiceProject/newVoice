@@ -1,5 +1,81 @@
 .consult_body{
     background:#e8e8e8;
+    .consult_remen{
+        background:#fff;
+        margin:0.1rem 0 0.25rem;
+        a{
+            display:block;
+            margin: 0 0.15rem;
+            line-height: 0.4rem;
+            border-bottom: 1px solid #e8e8e8;
+            background:url(/img/next.png) no-repeat right center;
+            background-size:0.07rem;
+            font-size:0.14rem;
+        }
+        ul{
+            display:flex;
+            align-items: flex-start;
+            li{
+                flex:1;
+                display:flex;
+                flex-direction:column;
+                align-items: center;
+                padding:0.17rem 0;
+                img{
+                    border-radius:50%;
+                    width:0.65rem;
+                }
+                h2{
+                    font-size:0.15rem;
+                    font-weight:normal;
+                    line-height:0.37rem;
+                }
+                h6{
+                    line-height: 0.22rem;
+                    font-size: 0.13rem;
+                    color:#999;
+                    font-weight:normal;
+                }
+                p{
+                    font-size: 0.12rem;
+                    line-height: 0.17rem;
+                    padding: 0 0.15rem;
+                    text-align: center;
+                    color:#999;
+                }
+            }
+        }
+    }
+    .consult_active{
+        background:#fff;
+        .active_div{
+            padding: 0.15rem 0.15rem 0.15rem 0;
+            margin-left:0.15rem;
+            border-bottom: 1px solid #e8e8e8;
+            display:flex;
+            align-items: center;
+            img{
+                width:0.87rem;
+            }
+            div{
+                padding-left:0.25rem;
+                h2{
+                    font-size: 0.15rem;
+                    width: 100%;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    font-weight:normal;
+                }
+                p{
+                    font-size: 0.12rem;
+                    color: #2185cf;
+                    padding-top:0.15rem;
+                }
+            }
+        }
+    }
+    
 }
 .consult_banner{
     width:100%;

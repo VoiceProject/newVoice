@@ -11,11 +11,15 @@ class ConsultComponent extends React.Component{
         super(props,context)
         this.state={
             placeholder:"搜索问题",
-            datainfo:[]
+            datainfo:[],
+            remendata:[],
+            activedata:[]
         }
     }
     componentWillMount(){
         this.getData()
+        this.getremenData();
+        this.getactiveData();
     }
     getData(){
             let that=this;
@@ -29,6 +33,43 @@ class ConsultComponent extends React.Component{
                 })
             })
         }
+    //获取热门专家模块与活跃组织板块数据
+    getremenData(){
+        let that=this;
+         let time=new Date().getTime()        
+        Fetch.Get('http://api.12355.net/pc/service/findAllExpertAccount?page=0&rows=3&_='+time+'',{}).then((res)=>{
+            return res.json()
+        }).then((json)=>{
+            that.setState({
+                remendata:json.rows
+            })                        
+        })
+    }
+    getactiveData(){
+        let that=this;
+         let time=new Date().getTime()        
+        Fetch.Get('http://api.12355.net/pc/service/searchOrganization?page=0&rows=3&order=desc&sort=answer_question_count&_='+time+'',{}).then((res)=>{
+            return res.json()
+        }).then((json)=>{
+            that.setState({
+                activedata:json.rows
+            })                        
+        })
+    }
+    showremenData(){
+        let arr=[];
+        this.state.remendata.forEach((item,i)=>{
+            arr.push(<li><img src={item.photoUrl}/><h2>{item.experName}</h2><h6>{item.expProfession}</h6><p>{item.speciality}</p></li>)
+        })
+        return arr;
+    }
+    showactiveData(){
+        let arr=[];
+        this.state.activedata.forEach((item,i)=>{
+            arr.push(<div className="active_div"><img src={item.photoUrl}/><div><h2>{item.fullName}</h2><p>回答问题{item.answerQuestionCount}次</p></div></div>)
+        })
+        return arr;
+    }
     render(){
         return(
            <div className="consult_body">
@@ -43,6 +84,14 @@ class ConsultComponent extends React.Component{
             </div>
             <Helpmore data={this.state.datainfo}/>
             <ConsultQuestionComponent/>
+            <div className="consult_remen">
+                <a>热门专家</a>
+                <ul>{this.showremenData()}</ul>
+            </div>
+            <div className="consult_remen consult_active">
+                <a>活跃组织</a>
+                {this.showactiveData()}
+            </div>
             <FooterComponent active="/consult"/>
            </div>
         )
