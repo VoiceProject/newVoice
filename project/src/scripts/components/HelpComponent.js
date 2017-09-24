@@ -2,6 +2,7 @@ import FooterComponent from "./FooterComponent"
 import Searchinput from './HelpComponent/Searchinput.js'
 import Helpmore from './HelpComponent/helpmore.js'
 import MainHelpComponent from './MainComponent/MainHelpComponent.js'
+import TuijianZuzhi from './HelpComponent/TuijianZuzhi.js'
 class HelpComponent extends React.Component{
       constructor(props,context){
         super(props,context)
@@ -32,6 +33,7 @@ class HelpComponent extends React.Component{
                    
                </div>
                <MainHelpComponent/>
+               <TuijianZuzhi/>
                <FooterComponent active="/help"/>
            </div>
         )

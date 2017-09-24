@@ -86,3 +86,62 @@
         line-height:0.25rem;
     }
 }
+
+
+
+//******推荐组织
+.Help_Zuzhi_box{
+    padding:0 0.15rem;
+    ul{
+        li{
+            padding: 0.15rem 0;
+            border-bottom: 1px solid #e2e2e2;
+            display: flex;
+            align-items: center;
+            .Main_tuijian_box__left{
+                width: 1rem;
+                height: 0.8rem;
+                line-height: 0.8rem;
+                text-align: center;
+                font-size: 0;
+                background: #f0f0f0;
+                overflow: hidden;
+                margin-right: 0.15rem;
+                img{
+                    max-width: 100%;
+                    max-height: 100%;
+                    display: inline;
+                    vertical-align: middle;
+                }
+            }
+            .Main_tuijian_box__right{
+                width:2.7rem;
+                h3,h4{
+                    font-size: 0.15rem;
+                    font-weight: normal;
+                }
+                h4{
+                    line-height: 0.11rem;
+                    padding: 0.08rem 0;
+                    font-size: 0.12rem;
+                    color: #ff8814;
+                    >span{
+                        padding-right:4px;
+                        font-size: 0.16rem;
+                    }
+                }
+                p{
+                    font-size: 0.12rem;
+                    span{
+                        display: inline-block;
+                        color: #999;
+                        float:left;
+                    }
+                    span:nth-child(2){
+                        float:right;
+                    }
+                }
+            }
+        }
+    }
+}
