@@ -197,13 +197,13 @@
     background:#fff;
     overflow: hidden;
     margin-bottom:0.25rem;
+    display: flex;
     >div{
-        float: left;
         a{
             display: block;
             position: relative;
             overflow: hidden;
-            margin:8px 0;
+            margin:4px 0;
             span{
                 position: absolute;
                 left:0;
@@ -227,18 +227,25 @@
     }
     .main_photoMenu__right{
         margin-left: 5px;
+        display: flex;
+        flex-direction: column;
         a.main_photoMenu__right--top{
-            width: 2.4rem;
-            height: 0.9rem;
+            width: 2.45rem;
+            height: 0.95rem;
+
             img{
-                width: 2.4rem;
+                width:100%;
+                height: 0.95rem;
             }
         }
         div.main_photoMenu__right--bottom{
+            display: flex;
+            a:first-child{
+                margin-right: 0.06rem;
+            }
             a{
                 width: 1.2rem;
                 height: 1.2rem;
-                float:left;
                 margin-bottom:0px;
                 img{
                     width:1.2rem;
@@ -313,17 +320,27 @@
 }
 
 
-//*****************推荐项目组件***********// 
+// *****************很多组件都有的title部分
 .Main_tuijian_box__title{
     height: 0.5rem;
     line-height: 0.5rem;
-    background: url(/img/next.png) no-repeat right center;
-    background-size: 0.07rem 0.13rem;
+    
     font-size: 0.15rem;
     font-weight: normal;
     border-bottom: 1px solid #e2e2e2;
+    a{
+        width: 0.4rem;
+        height: 100%;
+        float: right;
+        background: url(/img/next.png) no-repeat right center;
+        background-size: 0.07rem 0.13rem;
+        display: inline-block;
+    }
 }
 
+
+
+//*****************推荐项目组件***********// 
 .MainProject_box{
     padding:0 0.15rem;
     margin:0.1rem 0;

@@ -19,6 +19,10 @@ import MineComponent from './scripts/components/MineComponent'
 import SearchAddress from './scripts/components/SearchAddress'
 import RegisterComponent from './scripts/components/MineComponent/RegisterComponent'
 import LoginComponent from './scripts/components/MineComponent/LoginComponent'
+
+import FindHelpComponent from './scripts/components/DetailComponent/FindHelpComponent.js'
+
+
 import {Provider} from 'react-redux'
 import store from './scripts/userredux/store'
 // {/* <IndexRedirect to="/main"/> */}
@@ -34,8 +38,11 @@ ReactDOM.render(
             <Route path="/help" component={HelpComponent}></Route>
             <Route path="/mine" component={MineComponent}></Route>
             <Route path="/searchaddress" component={SearchAddress}></Route>
-            <Route path="/register" component={RegisterComponent}></Route>            
-            <Route path="/login" component={LoginComponent}></Route>            
+            <Route path="/register" component={RegisterComponent}></Route>         <Route path="/login" component={LoginComponent}></Route>
+
+            <Route path="/findhelp" component={FindHelpComponent}></Route>
+
+                        
             <Route path="*" component={MainComponent}></Route>
 
         </Route>
