@@ -1,0 +1,147 @@
+.help_body{
+    background:#e8e8e8;
+}
+.help_pic{
+    margin:0.1rem 0 0.15rem;
+    img{
+        width:100%;
+    }
+}
+.help_more{
+    background:#fff;
+    margin-bottom:0.25rem;
+    ul{
+        display:flex;
+        li{
+            width:20%;
+            padding:0.15rem 0.08rem;
+            display:flex;
+            flex-direction:column;
+            align-items: center;
+            img{
+                width:0.4rem;
+            }
+            span{
+                padding-top:0.08rem;
+                font-size:0.14rem;
+            }
+        }
+    }
+}
+.help_other{
+    background:#fff;
+    margin-bottom:0.25rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    a{
+        width:50%;
+        text-align: center;
+        padding:0.1rem 0;
+        img{
+            width:0.5rem;
+            display:inline;
+            vertical-align:middle;
+            margin-right:0.1rem;
+        }
+       
+    }
+    .help_first{
+        border-right:solid 1px #e8e8e8;
+    }
+   
+}
+ .activity_zhoubian{
+     a{
+        img{
+            width:0.35rem;
+            border-radius:0.05rem;
+        }
+     }
+}
+.search_box{
+     background-color: #e4e4e4;
+    padding: 0.1rem 0.15rem;
+    display:flex;
+    justify-content: space-between;
+    input{
+        height:0.25rem;
+        border-radius:0.05rem;
+        background:#f3f3f3 url(/img/searchicon.png) no-repeat 0.1rem center;
+        padding-left:0.45rem;
+        background-size:0.2rem;
+        width:100%;
+    }
+    .search_box__short{
+        width:77%;
+    }
+    a{
+        width:20%;
+        display:inline-block;
+        text-align: center;
+        color:#fff;
+        font-size:0.13rem;
+        background-color: #2185cf;
+        border-radius:0.025rem;
+        line-height:0.25rem;
+    }
+}
+
+
+
+//******推荐组织
+.Help_Zuzhi_box{
+    padding:0 0.15rem;
+    ul{
+        li{
+            padding: 0.15rem 0;
+            border-bottom: 1px solid #e2e2e2;
+            display: flex;
+            align-items: center;
+            .Main_tuijian_box__left{
+                width: 1rem;
+                height: 0.8rem;
+                line-height: 0.8rem;
+                text-align: center;
+                font-size: 0;
+                background: #f0f0f0;
+                overflow: hidden;
+                margin-right: 0.15rem;
+                img{
+                    max-width: 100%;
+                    max-height: 100%;
+                    display: inline;
+                    vertical-align: middle;
+                }
+            }
+            .Main_tuijian_box__right{
+                width:2.7rem;
+                h3,h4{
+                    font-size: 0.15rem;
+                    font-weight: normal;
+                }
+                h4{
+                    line-height: 0.11rem;
+                    padding: 0.08rem 0;
+                    font-size: 0.12rem;
+                    color: #ff8814;
+                    >span{
+                        padding-right:4px;
+                        font-size: 0.16rem;
+                    }
+                }
+                p{
+                    font-size: 0.12rem;
+                    span{
+                        display: inline-block;
+                        color: #999;
+                        float:left;
+                    }
+                    span:nth-child(2){
+                        float:right;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,558 @@
+.mainIndexBox{
+    width:100%;
+    
+}
+
+//*****************大轮播组件***********// 
+.lunboBox{
+    width:100%;
+    .swiper-container--lunobo{
+        min-height: 1.4rem;
+        position: relative;
+        img{
+            width:100%;
+        }
+        .swiper-pagination{
+            padding-right:20px;
+            text-align:right;
+            .swiper-pagination-bullet{
+                width: 0.1rem;
+                height: 0.025rem;
+                border-radius: 0.2rem;
+                background-color: #d1d6df;
+            }
+            .swiper-pagination-bullet-active{
+                background-color: #2185cf;
+                width: 0.15rem
+            }
+        }
+    }
+    
+}
+
+//*****************地址及向上小轮播组件***********// 
+.address_box{
+    padding:0 0.15rem;
+    height:0.54rem;
+    background:#fff;
+    width:100%;
+    display: flex;
+    a{
+        display: inline-block;
+        width:20%;
+        padding:0.15rem 0;
+        text-align: center;
+        
+        span.address_box--wordSpan{
+            width:100%;
+            display: inline-block;
+            padding-left:0.1rem;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+            height: 0.24rem;
+            line-height: 0.24rem;
+            border-right:1px solid #e8e8e8;
+            background:url(http://www.gd12355.org/wechat/public/img/indexAddress.png) no-repeat left center;
+            background-size: 0.12rem;
+        }
+    }
+    .address_box--right{
+        padding:0.12rem 0;
+        background: url(http://www.gd12355.org/wechat/public/img/next.png) no-repeat right center;
+        background-size: 0.07rem;
+        padding-left: 0.2rem;
+        width: 70%;
+        .swiper-container--news{
+            width:90%;
+            height: 100%;
+            overflow: hidden;
+            .address_box--slide{
+                display: flex;
+                height: 100%;
+                align-items: center;
+                img{
+                    width:0.3rem;
+                    display: inline-block;
+                    border-radius: 50%;
+                }
+                .address_box--word{
+                    flex:1 1;
+                    margin-left: 0.2rem;
+                    h5{
+                        white-space: nowrap;
+                        overflow: hidden;
+                        width:80%;
+                        height: 0.19rem;
+                        line-height: 0.19rem;
+                        font-size: 0.12rem;
+                        font-weight: normal;
+                        text-overflow: ellipsis;
+                    }
+                    p{
+                        font-size: 0.10rem;
+                        color:#999;
+                        position: relative;
+                        top:-3px;
+                    }
+                }
+               
+            }
+            
+        }
+    }
+}
+
+//*****************中部导航栏组件***********// 
+.MainActivity_box{
+    position: relative;
+    width:100%;
+    height:0.78rem;
+    background:#fff;
+    margin:0.25rem 0;
+}
+.swiper-wrapper--activity{
+    >div{
+        display: flex;
+    }
+    h3{
+        font-weight: normal;
+        font-size: 0.15rem;
+    }
+    li{
+        
+        flex:1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        img{
+            
+        }
+    }
+    .swiper-slide--activity1{
+        
+        &>li:nth-child(1){
+            h3{
+                color:#2185cf;
+            }
+            img{
+                width: 0.5rem;
+            }
+        }
+        &>li:nth-child(2){
+            border-left: 1px solid #e8e8e8;
+            border-right: 1px solid #e8e8e8;
+            h3{
+                color:#74d3ff;
+            }
+            img{
+                width:0.3rem;
+            }
+        }
+        &>li:nth-child(3){
+            h3{
+                color:#ff4b0c;
+            }
+            img{
+                width: 0.4rem;
+            }
+        }
+    }
+
+    .swiper-slide--activity2{
+        
+        &>li:nth-child(1){
+            img{
+                width: 0.6rem;
+                padding-top:10px;
+            }
+        }
+        &>li:nth-child(2){
+            border-left: 1px solid #e8e8e8;
+            border-right: 1px solid #e8e8e8;
+            h3{
+                color:#8be766;
+            }
+            img{
+                width: 0.895rem;
+                padding-top: 5px;
+            }
+        }
+        &>li:nth-child(3){
+            h3{
+                color:#df3333;
+            }
+            img{
+                width: 0.7rem;
+                margin-top: -4px;
+            }
+        }
+    }
+
+}
+
+//*****************照片菜单组件***********// 
+.main_photoMenu{
+    background:#fff;
+    overflow: hidden;
+    margin-bottom:0.25rem;
+    display: flex;
+    >div{
+        a{
+            display: block;
+            position: relative;
+            overflow: hidden;
+            margin:4px 0;
+            span{
+                position: absolute;
+                left:0;
+                top:0;
+                padding: 0.05rem 0.12rem;
+                background-color: rgba(0,0,0,.5);
+                color: #fff;
+                font-size: 0.16rem;
+            }
+        }
+    }
+    .main_photoMenu__left{
+        a{
+            width: 1.2rem;
+            height: 1.1rem;
+           
+            img{
+                width: 1.5rem;
+            }
+        }
+    }
+    .main_photoMenu__right{
+        margin-left: 5px;
+        display: flex;
+        flex-direction: column;
+        a.main_photoMenu__right--top{
+            width: 2.45rem;
+            height: 0.95rem;
+
+            img{
+                width:100%;
+                height: 0.95rem;
+            }
+        }
+        div.main_photoMenu__right--bottom{
+            display: flex;
+            a:first-child{
+                margin-right: 0.06rem;
+            }
+            a{
+                width: 1.2rem;
+                height: 1.2rem;
+                margin-bottom:0px;
+                img{
+                    width:1.2rem;
+                }
+            }
+        }
+    }
+}
+
+//*****************推荐活动组件***********// 
+.Main_tuijian_box{
+    padding:0 0.15rem;
+    ul{
+        li{
+            display: flex;
+            border-bottom: 1px solid #e2e2e2;
+            padding:0.15rem 0;
+            .Main_tuijian_box__item--left{
+                position: relative;
+                width:1rem;
+                height: 0.8rem;
+                margin-right: 0.1rem;
+                img{
+                    width:1rem;
+                    height: 0.8rem;
+                }
+                span{
+                    position: absolute;
+                    display: inline-block;
+                    width:100%;
+                    height:0.19rem;
+                    line-height: 0.19rem;
+                    text-align: center;
+                    background-color: #0064B6;
+                    color:#FFF;
+                    font-size:10px;
+                    bottom:3px;
+                    opacity: 0.8;
+                    left:0px;
+                }
+            }
+            .Main_tuijian_box__item--right{
+                h3{
+                    font-size: 0.15rem;
+                    font-weight: normal;
+                    width: 2.3rem;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                p{
+                    font-size: 0.12rem;
+                }
+                p:nth-of-type(1){
+                    color: #2185cf;
+                    margin-top: 0.11rem;
+                    
+                }
+                p:nth-of-type(2){
+                    color: #999;
+                }
+                p:nth-of-type(3){
+                    color: #999;
+                    width: 2.3rem;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}
+
+
+// *****************很多组件都有的title部分
+.Main_tuijian_box__title{
+    height: 0.5rem;
+    line-height: 0.5rem;
+    
+    font-size: 0.15rem;
+    font-weight: normal;
+    border-bottom: 1px solid #e2e2e2;
+    a{
+        width: 0.4rem;
+        height: 100%;
+        float: right;
+        background: url(/img/next.png) no-repeat right center;
+        background-size: 0.07rem 0.13rem;
+        display: inline-block;
+    }
+}
+
+
+
+//*****************推荐项目组件***********// 
+.MainProject_box{
+    padding:0 0.15rem;
+    margin:0.1rem 0;
+    ul{
+        li{
+            border-bottom: 1px solid #e2e2e2;
+            padding:0.15rem 0;
+            .Main_project_box__item--top{
+                width:3.45rem;
+                height: 1rem;
+                img{
+                    width:3.45rem;
+                    height: 1rem;
+                }
+            }
+            .Main_project_box__item--bottom{
+                line-height: 0.15rem;
+               overflow: hidden;
+                margin-top: 0.15rem;
+                span{
+                    display: inline-block;
+                    float:left;
+                }
+                span.word-green{
+                    color:#33cc33;
+                }
+                span.word-gary{
+                    color: #ccc;
+                }
+                span:nth-of-type(1){
+                    font-size: 0.15rem;
+                    color: #2185cf;
+                    margin-right: 0.1rem;
+                }
+                span:nth-of-type(2){
+                    width: 62%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    font-size: 0.15rem;
+                    color: #000;
+                }
+                span:nth-of-type(3){
+                    float: right;
+                    height: 0.16rem;
+                    line-height: 0.16rem;
+                    font-size: 0.12rem;
+                }
+            }
+        }
+    }
+}
+
+
+//*****************热门问题组件***********// 
+.MainQuestion_box{
+    padding:0 0.15rem;
+    margin-bottom: 0.1rem;
+    .Main_tuijian_box__title{
+        span{
+            width: 0.63rem;
+            padding: 0 3px;
+            height: 0.48rem;
+            line-height: 0.48rem;
+            display: inline-block;
+            text-align: center;
+            border-bottom: 2px solid #fff;
+        }
+        span.on{
+            color: #2185cf;
+            border-color: #2185cf;
+        }
+    }
+
+    ul{
+        li{
+            padding: 0.15rem 0;
+            border-bottom: 1px solid #e2e2e2;
+            display: flex;
+            align-items: center;
+            .Main_tuijian_box__left{
+                width:0.6rem;
+                height: 0.6rem;
+                border-radius: 50%;
+                position: relative;
+                display: inline-block;
+                overflow: hidden;
+                margin-right: 0.15rem;
+                img{
+                    width:100%;
+                }
+            }
+            .Main_tuijian_box__right{
+                width:2.7rem;
+                h3,h4{
+                    font-size: 0.15rem;
+                    color: #2185cf;
+                    font-weight: normal;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                h4{
+                    height:0.40rem;
+                    color:#000;
+                    white-space: normal;
+                    border-bottom: 1px solid #e2e2e2;
+                }
+                p{
+                    font-size: 0.12rem;
+                    padding:0.1rem 0;
+                    span{
+                        display: inline-block;
+                        color: #999;
+                        float:left;
+                        i{
+                            display: inline-block;
+                            width: 0.11rem;
+                            background:url(/img/message.png) no-repeat;
+                            background-size: 100%;
+                            height: 0.11rem;
+                            position: relative;
+                            top:2px;
+                            margin-right: 2px;
+                        }
+                    }
+                    span:nth-child(1){
+                        margin-right: 0.1rem;
+                        width: 36%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                    span:nth-child(3){
+                        float: right;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+//*****************求助组件***********// 
+.MainHelp_box{
+    padding:0 0.15rem;
+    margin-bottom: 0.25rem;
+    .Main_tuijian_box__title{
+        span{
+            width: 0.63rem;
+            padding: 0 3px;
+            height: 0.48rem;
+            line-height: 0.48rem;
+            display: inline-block;
+            text-align: center;
+            border-bottom: 2px solid #fff;
+        }
+        span.on{
+            color: #2185cf;
+            border-color: #2185cf;
+        }
+    }
+
+    ul{
+        li{
+            padding: 0.15rem 0;
+            border-bottom: 1px solid #e2e2e2;
+            display: flex;
+            align-items: center;
+            .Main_tuijian_box__left{
+                width: 1rem;
+                height: 0.8rem;
+                line-height: 0.8rem;
+                text-align: center;
+                font-size: 0;
+                background: #f0f0f0;
+                overflow: hidden;
+                margin-right: 0.15rem;
+                img{
+                    max-width: 100%;
+                    max-height: 100%;
+                    display: inline;
+                    vertical-align: middle;
+                }
+            }
+            .Main_tuijian_box__right{
+                width:2.7rem;
+                h3,h4{
+                    font-size: 0.15rem;
+                    font-weight: normal;
+                }
+                h4{
+                    margin: 0.1rem 0;
+                    max-height: 0.4rem;
+                    overflow: hidden;
+                    font-size: 0.13rem;
+                    color:#666;
+                }
+                p{
+                    font-size: 0.12rem;
+                    padding:0.1rem 0;
+                    span{
+                        display: inline-block;
+                        color: #999;
+                        float:left;
+                    }
+                    span:nth-child(2){
+                        float:right;
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+}
