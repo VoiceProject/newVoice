@@ -39,9 +39,9 @@ ReactDOM.render(
             <Route path="/help" component={HelpComponent}></Route>
             <Route path="/mine" component={MineComponent}></Route>
             <Route path="/searchaddress" component={SearchAddress}></Route>
-            <Route path="/register" component={RegisterComponent}></Route>        
-             <Route path="/login" component={LoginComponent}></Route>
 
+            <Route path="/register" component={RegisterComponent}></Route>        
+             <Route path="/login" component={LoginComponent}></Route>       
             <Route path="/findhelp" component={FindHelpComponent}></Route>
             <Route path="/activitydetail" component={ActivityDetailComponent}></Route>            
             <Route path="/hotdetail" component={HotDetailComponent}></Route>                      

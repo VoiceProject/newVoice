@@ -1079,6 +1079,7 @@ footer {
     background: url(/img/zhuanjia.png) no-repeat left center;
     background-size: 0.27rem;
     border-right: none; }
+<<<<<<< HEAD
 
 .activitydetail .headerdetail {
   padding: 0.1rem 0;
@@ -1224,3 +1225,5 @@ footer {
     line-height: 0.2rem;
     font-size: 0.14rem;
     text-indent: 0.24rem; }
+=======
+>>>>>>> 2d47c70ba038fd318650c6b3b4fa3ed36373fbf6
