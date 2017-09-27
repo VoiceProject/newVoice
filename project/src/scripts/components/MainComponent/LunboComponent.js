@@ -39,6 +39,7 @@ class LunboComponent extends React.Component{
         
     }
     showImage(){
+        console.log(this.state.imgArr)
         let arr=[]
         this.state.imgArr.forEach((ele)=>{
             arr.push(

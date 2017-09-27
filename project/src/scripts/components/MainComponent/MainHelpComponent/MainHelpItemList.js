@@ -1,5 +1,5 @@
 
-
+import {Link} from 'react-router'
 import Fetch from '../../../modules/fetch'
 class MainHelpItemList extends React.Component{
     constructor(props,context){
@@ -21,6 +21,7 @@ class MainHelpItemList extends React.Component{
         Fetch.Get("http://api.12355.net/pc/help/findAllHelp?title=&auditStatus=1&page=1&rows=6&sort=create_time&order=desc&_="+time+"",{}).then((res)=>{
             return res.json()
         }).then((json)=>{
+            console.log(json)
             this.setState({
                 list1:json.rows
             })
@@ -55,7 +56,9 @@ class MainHelpItemList extends React.Component{
             if(imgArr[0]==""){
                 imgArr[0]="http://www.gd12355.org/wechat/public/img/default/default_12.jpg"
             }
-            arr.push(<li>
+            let hpId="/findhelp?hpId="+ele.hpId
+            arr.push(
+            <Link to={hpId}><li data-id={ele.hpId}>
                 <div className="Main_tuijian_box__left">
                 <img src={imgArr[0]}/>
             </div>
@@ -67,7 +70,7 @@ class MainHelpItemList extends React.Component{
                     <span>{str}</span>
                     </p>
             </div>
-            </li>)
+            </li></Link>)
         })
         return arr
     }
