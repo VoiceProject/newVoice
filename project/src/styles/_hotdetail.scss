@@ -87,10 +87,10 @@
         background-size:0.15rem;     
     }
     .des{
-        display:flex;
+        display:flex;flex-wrap: wrap;
         span{
            background-color: #2185cf;
-            color: #fff;
+            color: #fff; 
             border-color: #2185cf;
             font-size: 0.13rem;
             display: block;
@@ -99,8 +99,13 @@
             border-radius: 0.05rem;
             line-height: 0.34rem;
             border: 1px solid #999;
-            flex-wrap: wrap;
+            margin-left:0.12rem;
+            margin-bottom:0.12rem;
         }
 
+    }
+    p{
+        padding:0.1rem;
+        text-indent: 2em;
     }
 }
