@@ -24,10 +24,13 @@ class HotActivityComponent extends React.Component{
             })
         })
     }
+    hothref(id){
+        location.href='#/hotdetail?oid='+id
+    }
     showList(){
         let arr=[]
         this.state.list.forEach(ele=>{
-            arr.push(<li>
+            arr.push(<li onClick={this.hothref.bind(this,ele.oid)}>
                 
                 <div className="ActivityHot_box__item--left">
                     <img src={ele.photoUrl}/>

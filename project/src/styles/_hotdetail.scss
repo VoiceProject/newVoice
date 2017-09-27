@@ -1,0 +1,106 @@
+.hotdetail{
+    background: #ebebeb;
+    .hot_header{
+        display:flex;
+        padding: 0.15rem;
+        border-bottom: 1px solid #e2e2e2;
+        img{
+            width:0.8rem;
+            height:0.8rem;
+        }
+        .hot_header__right{
+            padding-left:0.12rem;
+            height:100%;
+            h2{
+                font-weight:normal;
+                font-size: 0.15rem;
+                line-height: 0.17rem;
+            }
+            p{
+                font-size:0.12rem;
+                color:#999;
+                padding:0.1rem 0 0.1rem;
+            }
+            h4{
+                font-weight:normal;
+                color: #ff8814;
+                font-size:0.16rem;
+                span{
+                    padding-left:0.08rem;
+                    padding-right:0.1rem;
+                }
+                i{
+                    font-style: normal;
+                    color:#999;
+                }
+            }
+        }
+    }
+    .hot_atten{
+        background:#fff;
+        display:flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #e8e8e8;
+        padding: 0.12rem 0.15rem;
+        margin-bottom: 0.1rem;
+        span{
+            color:#999;
+        }
+        p{
+            a{
+                padding: 0.045rem 0.13rem;
+                background-color: #2185cf;
+                color: #fff;
+                border-radius: 0.025rem;
+                font-size: 0.12rem;
+                margin-left:0.1rem;
+            }
+        }
+    }
+    >span{
+         border-bottom: 1px solid #e8e8e8;
+        padding: 0.12rem 0.15rem 0.12rem 0.42rem ;
+        display: inline-block;
+        width:100%;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size:0.15rem;
+        i{
+            background:url(/img/next.png) no-repeat right center;
+            background-size: 0.08rem;
+            display:inline-block;
+            width:0.8rem;
+            height:0.2rem;
+            color:#999;
+            font-size:0.12rem;
+            font-style: normal;
+        }
+       
+    }
+    .detail_tel{
+        background:#fff url(http://www.gd12355.org/wechat/public/img/iconPhone.png) no-repeat 0.15rem center;
+        background-size:0.15rem;  margin-bottom:0.1rem;
+    }
+    .detail_address{
+          background:#fff url(http://www.gd12355.org/wechat/public/img/iconAddress.png) no-repeat 0.15rem center;
+        background-size:0.15rem;     
+    }
+    .des{
+        display:flex;
+        span{
+           background-color: #2185cf;
+            color: #fff;
+            border-color: #2185cf;
+            font-size: 0.13rem;
+            display: block;
+            width:1.08rem;
+            text-align: center;
+            border-radius: 0.05rem;
+            line-height: 0.34rem;
+            border: 1px solid #999;
+            flex-wrap: wrap;
+        }
+
+    }
+}

@@ -17,6 +17,9 @@ class TuijianActivityComponent extends React.Component{
             })
         })
     }
+    detailhref(id){
+        location.href='#/activitydetail?activityId='+id;
+    }
     showList(){
         let arr=[]
         let str=""
@@ -30,7 +33,7 @@ class TuijianActivityComponent extends React.Component{
             }else if(ele.actStatus==3){
                 str="活动中"
             }
-            arr.push(<li>
+            arr.push(<li onClick={this.detailhref.bind(this,ele.id)}>
                 <div className="Main_tuijian_box__item--left">
                 <img src={ele.imageUrl}/>
                 <span>{str}</span>

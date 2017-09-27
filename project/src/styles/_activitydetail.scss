@@ -1,0 +1,165 @@
+.activitydetail{
+    .headerdetail{
+        padding:0.1rem 0;
+        background-color: #2185cf;
+        display:flex;
+        align-items: center;
+        .detail_main{
+            background:url(http://www.gd12355.org/wechat/public/img/head_logo.png) no-repeat center;
+            display:inline-block;
+            width:1rem;
+            height:0.18rem;
+            background-size:0.7rem;
+            border-right:solid 1px #91b9d6;
+        }
+        .find_activity{
+            color:#fff;
+            padding-left:0.1rem;
+            font-size:0.12rem;
+            
+        }
+    }
+    >a{
+        img{
+            height:2.4rem;
+            width:100%;
+        }
+    }
+    .detail_title{
+        padding:0.09rem 0.15rem;
+        border-bottom: 1px solid #e8e8e8;
+        display: flex;
+        justify-content: space-between;
+        background:#fff;
+        span{
+            background: url(http://www.gd12355.org/wechat/public/img/collect_star.png) no-repeat center top;
+            padding-top:0.18rem;
+            width:0.5rem;
+            text-align: center;
+            font-size: 0.12rem;
+            background-size: 0.14rem;
+            display:block;
+            height:0.35rem;
+            text-align: center;
+            border-left:solid 1px #e8e8e8;
+        }
+        p{
+            font-size:0.15rem;
+              padding-right:0.2rem;
+              line-height:0.18rem;
+              width:3.8rem;
+          
+        }
+    }
+    .detail_dist{
+        background:#fff;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #e8e8e8;
+        padding: 0.08rem 0.15rem;
+         margin-bottom: 0.1rem;
+        p{
+            padding: 0.05rem;
+            background-color: #2185cf;
+            color: #fff;
+            border-radius: 0.025rem;
+            font-size: 0.12rem;
+          
+        }
+        span{
+            i{
+                font-style: normal;
+                font-size: 0.13rem;
+                color: #999;
+            }
+            u{
+                background:url(http://www.gd12355.org/wechat/public/img/report.png) no-repeat left center;
+                padding-left:0.16rem;
+                text-decoration: none;
+                margin-left:0.12rem;
+            }
+        }
+    }
+    >span{
+        border-bottom: 1px solid #e8e8e8;
+        padding: 0.12rem 0.15rem 0.12rem 0.42rem ;
+        display: inline-block;
+        width:100%;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size:0.15rem;
+        i{
+            background:url(/img/next.png) no-repeat right center;
+            background-size: 0.08rem;
+            display:inline-block;
+            width:0.8rem;
+            height:0.2rem;
+            color:#999;
+            font-size:0.12rem;
+            font-style: normal;
+        }
+       
+    }
+    .detail_time{
+        background:#fff url(http://www.gd12355.org/wechat/public/img/iconTime.png) no-repeat 0.15rem center;
+        background-size:0.15rem;
+    }
+    .detail_address{
+        background:#fff url(http://www.gd12355.org/wechat/public/img/iconAddress.png) no-repeat 0.15rem center;
+        background-size:0.15rem;
+    }
+    .detail_money{
+        margin:0.1rem 0;
+        background:#fff url(http://www.gd12355.org/wechat/public/img/iconFree.png) no-repeat 0.15rem center;
+        background-size:0.15rem;
+    }
+    .detail_orgname{
+        background:#fff url(http://www.gd12355.org/wechat/public/img/iconHolder.png) no-repeat 0.15rem center;
+        background-size:0.15rem;
+    }
+    .detail_tel{
+        background:#fff url(http://www.gd12355.org/wechat/public/img/iconPhone.png) no-repeat 0.15rem center;
+        background-size:0.15rem;
+    }
+    .detail_type{
+        background:#fff url(http://www.gd12355.org/wechat/public/img/iconPeixun.png) no-repeat 0.15rem center;
+        background-size:0.15rem;
+    }
+    .detail_activitynum{
+        margin-top:0.1rem;
+        background:#fff url(http://www.gd12355.org/wechat/public/img/huodongrenshu.png) no-repeat 0.15rem center;
+        background-size:0.15rem;
+    }
+    .detail_intro{
+        background:url(http://www.gd12355.org/wechat/public/img/jieshao.png) no-repeat 0.15rem center;
+        background-size:0.15rem;
+    }
+    .baoming{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #2185cf;
+        line-height: 0.4rem;
+        height: 0.4rem;
+        font-size: 0.15rem;
+        text-align: center;
+        color: #fff;
+    }
+    #myDiv{
+        background:#fff;
+        padding: 0.1rem 0.2rem 0rem 0.2rem;
+        border-bottom: 1px solid #e8e8e8;
+        overflow: hidden;
+        img{
+            width:100%;
+        }
+        p{
+            line-height: 0.2rem;
+            font-size: 0.14rem;
+            text-indent: 0.24rem;
+        }
+    }
+}

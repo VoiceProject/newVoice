@@ -21,7 +21,8 @@ import RegisterComponent from './scripts/components/MineComponent/RegisterCompon
 import LoginComponent from './scripts/components/MineComponent/LoginComponent'
 
 import FindHelpComponent from './scripts/components/DetailComponent/FindHelpComponent.js'
-
+import ActivityDetailComponent from './scripts/components/DetailComponent/ActivityDetailComponent.js'
+import HotDetailComponent from './scripts/components/DetailComponent/HotDetailComponent.js'
 
 import {Provider} from 'react-redux'
 import store from './scripts/userredux/store'
@@ -38,11 +39,12 @@ ReactDOM.render(
             <Route path="/help" component={HelpComponent}></Route>
             <Route path="/mine" component={MineComponent}></Route>
             <Route path="/searchaddress" component={SearchAddress}></Route>
-            <Route path="/register" component={RegisterComponent}></Route>         <Route path="/login" component={LoginComponent}></Route>
+            <Route path="/register" component={RegisterComponent}></Route>        
+             <Route path="/login" component={LoginComponent}></Route>
 
             <Route path="/findhelp" component={FindHelpComponent}></Route>
-
-                        
+            <Route path="/activitydetail" component={ActivityDetailComponent}></Route>            
+            <Route path="/hotdetail" component={HotDetailComponent}></Route>                      
             <Route path="*" component={MainComponent}></Route>
 
         </Route>
