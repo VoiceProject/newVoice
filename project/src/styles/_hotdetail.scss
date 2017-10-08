@@ -27,11 +27,13 @@
                 font-size:0.16rem;
                 span{
                     padding-left:0.08rem;
-                    padding-right:0.1rem;
+                    padding-right:0.1rem;  
+                    font-size:0.12rem;
                 }
                 i{
                     font-style: normal;
                     color:#999;
+                    font-size:0.12rem;
                 }
             }
         }
@@ -41,7 +43,7 @@
         display:flex;
         justify-content: space-between;
         border-bottom: 1px solid #e8e8e8;
-        padding: 0.08rem 0.15rem;
+        padding: 0.11rem 0.15rem;
         margin-bottom: 0.1rem;
         align-items: center;
         span{
@@ -76,6 +78,7 @@
             color:#999;
             font-size:0.12rem;
             font-style: normal;
+            float:right;
         }
        
     }
@@ -86,6 +89,35 @@
     .detail_address{
           background:#fff url(http://www.gd12355.org/wechat/public/img/iconAddress.png) no-repeat 0.15rem center;
         background-size:0.15rem;     
+    }
+    .detail_score{
+        margin-bottom:0.12rem;
+        background:#fff;
+        padding-left:0.15rem;
+        h4{
+            font-weight:normal;
+            color: #ff8814;
+            font-size:0.16rem;
+            padding:0.03rem 0;
+            font{
+                padding-right:0.1rem;
+                color:#333;
+                font-size:0.12rem;
+            }
+            u{
+                padding-left:0.08rem;
+                padding-right:0.1rem;
+                text-decoration: none;
+                font-size:0.12rem;
+                width: 0.47rem;
+                display: inline-block;
+            }
+            b{
+                font-weight:normal;
+                color:#999;
+                font-size:0.12rem;
+            }
+        }   
     }
     .des{
         display:flex;flex-wrap: wrap;
@@ -105,7 +137,7 @@
         }
 
     }
-    p{
+    >p{
         padding:0.1rem;
         text-indent: 2em;
     }

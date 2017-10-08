@@ -19,7 +19,6 @@ class HotDetailComponent extends React.Component {
             that.setState({
                hotdetail:json.rows              
             })
-             console.log('acti',that.state.hotdetail);
         })   
     }
     showdata(){
@@ -37,7 +36,21 @@ class HotDetailComponent extends React.Component {
     render(){
         let {hotdetail}=this.state;
         let starStr="★★★★★☆☆☆☆☆"
-        let rate=hotdetail.activityAverageScore;
+        let rate1=hotdetail.activityAverageScore
+        let rate2=hotdetail.helpAverageScore
+        let rate3=hotdetail.stationAverageScore
+        let activityAverageScore;
+        let helpAverageScore;
+        let stationAverageScore;
+        if(hotdetail.activityAverageScore){
+            activityAverageScore=hotdetail.activityAverageScore.toFixed(1);
+    }    
+        if(hotdetail.helpAverageScore){
+            helpAverageScore=hotdetail.helpAverageScore.toFixed(1);
+    }
+        if(hotdetail.stationAverageScore){
+            stationAverageScore=hotdetail.stationAverageScore.toFixed(1);
+    }    
         return (
           <div className="hotdetail">
                <div className="hot_header">
@@ -45,7 +58,7 @@ class HotDetailComponent extends React.Component {
                     <div className="hot_header__right">
                         <h2>{hotdetail.fullName}</h2>
                         <p>简称：{hotdetail.name}</p>
-                         <h4>{starStr.slice(5-rate,10-rate)}<span>{hotdetail.activityAverageScore}</span><i>{hotdetail.activityScoreCount}</i></h4> 
+                         <h4>{starStr.slice(5-rate1,10-rate1)}<span>{activityAverageScore==null?0:activityAverageScore}分</span><i>{hotdetail.activityScoreCount}人已评</i></h4> 
                     </div>
                </div>
                <div className="hot_atten">
@@ -55,6 +68,13 @@ class HotDetailComponent extends React.Component {
                        <a>向TA求助</a>
                    </p>
                </div>
+                <span className="detail_score">
+                    <div>
+                        <h4><font>主办活动</font>{starStr.slice(5-rate1,10-rate1)}<u>{activityAverageScore==null?0:activityAverageScore}分</u><b>{hotdetail.activityScoreCount}人已评</b></h4>
+                        <h4><font>求助解决</font>{starStr.slice(5-rate2,10-rate2)}<u>{helpAverageScore==null?0:stationAverageScore}分</u><b>{hotdetail.helpScoreCount}人已评</b></h4>
+                         <h4><font>线下服务</font>{starStr.slice(5-rate3,10-rate3)}<u>{stationAverageScore==null?0:stationAverageScore}分</u><b>{hotdetail.stationScoreCount==null?0:hotdetail.stationScoreCount}人已评</b></h4>
+                     </div>
+                    <i></i></span>
                 <span className="detail_address">{hotdetail.address}<i></i></span>
               <span className="detail_tel">{hotdetail.telephone}<i></i></span>
                 <div className="des">

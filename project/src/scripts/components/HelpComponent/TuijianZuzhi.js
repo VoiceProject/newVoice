@@ -10,6 +10,9 @@ class TuijianZuzhi extends React.Component{
     componentWillMount(){
         this.getData()
     }
+    tuijianhref(id){
+        location.href='#/hotdetail?oid='+id
+    }
     getData(){
         let time=new Date().getTime()
         Fetch.Get("http://api.12355.net/pc/help/findOrganization?page=1&rows=6&sort=attention_count+&order=desc&_="+time+"",{}).then((res)=>{
@@ -27,7 +30,7 @@ class TuijianZuzhi extends React.Component{
         let starStr="★★★★★☆☆☆☆☆"
         this.state.list.forEach(ele=>{
            let rate=ele.helpAverageScore;           
-            arr.push(<li>
+            arr.push(<li onClick={this.tuijianhref.bind(this,ele.oid)}>
                 <div className="Main_tuijian_box__left">
                 <img src={ele.photoUrl}/>
             </div>
