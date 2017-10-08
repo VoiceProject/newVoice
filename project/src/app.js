@@ -23,6 +23,8 @@ import LoginComponent from './scripts/components/MineComponent/LoginComponent'
 import FindHelpComponent from './scripts/components/DetailComponent/FindHelpComponent.js'
 import ActivityDetailComponent from './scripts/components/DetailComponent/ActivityDetailComponent.js'
 import HotDetailComponent from './scripts/components/DetailComponent/HotDetailComponent.js'
+import CommentDetailComponent from "./scripts/components/DetailComponent/CommentDetailComponent.js"
+
 
 import {Provider} from 'react-redux'
 import store from './scripts/userredux/store'
@@ -44,7 +46,9 @@ ReactDOM.render(
              <Route path="/login" component={LoginComponent}></Route>       
             <Route path="/findhelp" component={FindHelpComponent}></Route>
             <Route path="/activitydetail" component={ActivityDetailComponent}></Route>            
-            <Route path="/hotdetail" component={HotDetailComponent}></Route>                      
+            <Route path="/hotdetail" component={HotDetailComponent}></Route>   <Route path="/commentdetail" component={CommentDetailComponent}></Route> 
+
+
             <Route path="*" component={MainComponent}></Route>
 
         </Route>

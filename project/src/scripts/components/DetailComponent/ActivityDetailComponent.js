@@ -1,4 +1,5 @@
 import Fetch from '../../modules/fetch'
+import ActivityComment from "./ActivityComment.js"
 import $ from 'jquery'
 class ActivityDetailComponent extends React.Component {   
     constructor(props,context){
@@ -19,9 +20,7 @@ class ActivityDetailComponent extends React.Component {
         }).then((json)=>{
             that.setState({
                activitydetail:json.data 
-              
             })
-             console.log('acti',that.state.activitydetail);
         })   
     }
     showdata(){
@@ -38,6 +37,11 @@ class ActivityDetailComponent extends React.Component {
     }
     render(){
         let {activitydetail}=this.state;
+        let commentId
+        if(activitydetail.id){
+            commentId=activitydetail.id
+        }
+        console.log()
         return (
           <div className="activitydetail">
                 <div className="headerdetail">
@@ -64,7 +68,8 @@ class ActivityDetailComponent extends React.Component {
                 <span className="detail_type">{activitydetail.type}</span>
                 <span className="detail_activitynum">活动人数（{activitydetail.activitiesNumber}）<i>已有{activitydetail.enrolledNum}报名</i></span>
                 <span className="detail_intro">活动介绍</span>                
-                 <div id="myDiv">{this.showdata()}</div> 
+                 <div id="myDiv">{this.showdata()}</div>
+                 <ActivityComment/> 
                 <div className="baoming">立即报名</div>
           </div>
         )
@@ -72,6 +77,8 @@ class ActivityDetailComponent extends React.Component {
 }
 //定义默认属性
 ActivityDetailComponent.defaultProps={
+
+
 
 }
 

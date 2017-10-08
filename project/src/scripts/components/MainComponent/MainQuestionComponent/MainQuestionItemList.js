@@ -1,7 +1,7 @@
 
 import store from '../../../flux/store'
 import actions from "../../../flux/actions"
-
+import {Link} from "react-router"
 import Fetch from '../../../modules/fetch'
 
 class MainQuestionItemList extends React.Component{
@@ -53,7 +53,12 @@ class MainQuestionItemList extends React.Component{
     showlist(list=this.state.list1){
         let arr=[]
         list.forEach(ele=>{
-            arr.push(<li>
+            let godetali={ 
+                pathname:"/commentdetail", 
+                query:{qyId:ele.quId},   
+            } 
+            arr.push(
+            <Link to={godetali}><li>
                 <div className="Main_tuijian_box__left">
                     <img src={ele.photourl}/>
                 </div>
@@ -69,7 +74,7 @@ class MainQuestionItemList extends React.Component{
                         </span>
                         </p>
                 </div>
-            </li>)
+            </li></Link>)
         })
         return arr
     }

@@ -1,5 +1,6 @@
 import Fetch from '../../modules/fetch'
 
+import {Link} from "react-router"
 
 
 class AddressBox extends React.Component{
@@ -26,20 +27,25 @@ class AddressBox extends React.Component{
             })
         })
     }
-    toUrl(quId,username){
-        window.location.href="http://www.gd12355.org/wechat/view/find_consult/find_consult_question_detail.html?quId="+quId+"&username="+username+""
+    // toUrl(quId,username){
+    //     window.location.href="http://www.gd12355.org/wechat/view/find_consult/find_consult_question_detail.html?quId="+quId+"&username="+username+""
+    // }
+    toComment(id){
+        location.hash=id
     }
     showImage(){
         let arr=[]
         let that=this
         this.state.newsArr.forEach((ele)=>{
+            let toUrl="/commentdetail?"+ele.quId
             arr.push(
-                <div className="swiper-slide address_box--slide" onClick={that.toUrl.bind(that,ele.quId,ele.username)}>
+                <div className="swiper-slide address_box--slide" onClick={that.toComment.bind(that,toUrl)}>
                     <img src={ele.photourl}/>
                     <div className="address_box--word">
                         <h5>{ele.title}</h5>
                         <p>{ele.realname}</p>
                     </div>
+                     
                 </div>
         )
         })
@@ -64,14 +70,14 @@ class AddressBox extends React.Component{
         )
     }
     componentDidMount(){
+             
+    }
+    componentDidUpdate(){
         this.state.swiper = new Swiper ('.swiper-container--news', {
             direction: 'vertical',
             autoplay:3000,
             loop:true
-          })        
-    }
-    componentDidUpdate(){
-        this.state.swiper.update()
+          })   
     }
 }
 

@@ -39,17 +39,13 @@ class LunboComponent extends React.Component{
         
     }
     showImage(){
-        console.log(this.state.imgArr)
         let arr=[]
         this.state.imgArr.forEach((ele)=>{
             arr.push(
-                <div className="swiper-slide"><img src={ele.path} onClick={this.toUrl.bind(this,ele.url)}/></div>
+                <div className="swiper-slide"><img src={ele.path}/></div>
             )
         })
         return arr
-    }
-    toUrl(url){
-        window.location.href=url
     }
     render(){
         return(
